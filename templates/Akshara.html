@@ -1,0 +1,86 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{url_for('static',filename='styles/chandassu.css')}}">
+<script src="{{url_for('static',filename='styles/bootstrap/jquery.min.js')}}"></script>
+<script src="{{url_for('static',filename='styles/bootstrap.min.js')}}"></script>
+<style>
+body{
+    background-color:#D3D3D3
+}
+#header{
+    background-color: blue;
+    height:60px;
+    padding:5px;
+}
+textarea{
+    width:538px;
+    border:1px solid #aaa;
+    height:350px;
+    padding:20px;
+    font-size:14pt;
+    font-weight: bold;
+    border:1px solid black;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:black;
+   color: white;
+   text-align: center;
+}
+h4{
+font-size:150%;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+   <div class="container-fluid">
+    <div class="navbar-header">
+    <a><h4><font color=red><b>छन्दष्शास्त्म्</b></font></h4></a>
+    </div>
+   <ul class="nav navbar-nav">
+     <li class="active"><a href="{{ url_for('Home')}}"><h4>मुख्यपुटम्  </h4></a></li>
+<li><a href="{{ url_for('Chandassu')}}"><h4><font color=white>छन्द:</font></h4></a></li>
+<li><a href="{{ url_for('Laghu_Guru')}}"><h4><font color=white>लघुं - गुरुं  </font></h4></a></li>
+<li><a href="{{ url_for('Vrutta')}}"><h4><font color=white>वृत्तम्</font></h4></a></li>
+<li><a href="{{ url_for('Testing')}}"><h4><font color=white>परीक्षम्  </font></h4></a></li>
+<li><a href="{{ url_for('exe1')}}"><h4><font color=white>आभ्यासम्</font> </h4></a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="{{ url_for('About')}}"><h4><font color=white>माहिती</font> </h4></a></li>   
+</ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading" ><center><b><h1>अक्षर गण</h1></b><center></div>
+    <div class="panel-body">
+<h2><strong>अक्षर गण</strong></h2> </br> </br>
+<p><h3>अक्षराणाां आधारेण गण विभागां भिवि स एि अक्षर गण:।
+त्रीवण त्रीवण अक्षराणाां समूह: एि गण विभाग: ।</P> पद्यस्य सिे पादस्य सिव अक्षरावण गण विभाग: न भिवि, शेष: अक्षर: लघु अथिा गुरु भिवि ।</br></br>
+अक्षर गणे अष्ट विधावन सन्ति</br></p>
+1.य गण 2. म गण 3. त गण 4. र गण 5. ज गण 6. भ. गण 7 न. गण 8. स गण</br></br>
+“यमाताराजभानसलगं” सूत्र् </br></p>
+<center><img src="{{url_for('static',filename='images/img1.png')}}" /></center></br>
+</p>
+<div class="panel-footer"><ul class="pager">
+<li class="previous"><a href="{{ url_for('Laghu_Guru')}}">पूर्वतर पुट</a></li>
+<li class="next"><a href="{{ url_for('Vrutta')}}">पर पुट</a></li>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>
+</p>
+</br>
+</div>
+
+</body>
+</html>
+

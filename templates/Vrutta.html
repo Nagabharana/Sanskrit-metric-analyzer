@@ -1,0 +1,307 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{url_for('static',filename='styles/chandassu.css')}}">
+<script src="{{url_for('static',filename='styles/bootstrap/jquery.min.js')}}"></script>
+<script src="{{url_for('static',filename='styles/bootstrap.min.js')}}"></script>
+<style>
+body{
+    background-color:#D3D3D3
+}
+#header{
+    background-color: blue;
+    height:60px;
+    padding:5px;
+}
+textarea{
+    width:538px;
+    border:1px solid #aaa;
+    height:350px;
+    padding:20px;
+    font-size:14pt;
+    font-weight: bold;
+    border:1px solid black;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:black;
+   color: white;
+   text-align: center;
+}
+h4{
+font-size:150%;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <a><h4><font color=red><b>छन्दश्शास्त्रम्</b></font></h4></a>
+    </div>
+   <ul class="nav navbar-nav">
+    <li class="active"><a href="{{ url_for('Home')}}"><h4>मुख्यपुटम् </h4></a></li>
+<li><a href="{{ url_for('Chandassu')}}"><h4><font color=white>छन्द:</font></h4></a></li>
+<li><a href="{{ url_for('Laghu_Guru')}}"><h4><font color=white>लघुं - गुरुं  </font></h4></a></li>
+<li><a href="{{ url_for('Vrutta')}}"><h4><font color=white>वृत्तम्</font></h4></a></li>
+<li><a href="{{ url_for('Testing')}}"><h4><font color=white>परीक्षम् </font></h4></a></li>
+<li><a href="{{ url_for('exe1')}}"><h4><font color=white>आभ्यासम्</font> </h4></a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="{{ url_for('About')}}"><h4><font color=white>सूचना </font> </h4></a></li>   
+</ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading" ><center><b><h1>संस्कृत  व्रुत्तम्</h1></b><center></div>
+    <div class="panel-body">
+<h2><strong>संस्कृत  व्रुत्तम्</strong></h2> </br>
+<h4><b>1 . समवृत्तं - पद्यस्य चत्वारि पाद लक्षणानि समानम् भवति एक: भवति ।</p>
+<b>2 . अर्ध समवृत्तं - पद्यस्य प्रथम, त्रय: पाद लक्षणानि एक प्रकार: भवति । द्वितीय , चतुर्थ पाद लक्षणानि अपर: प्रकार: भवति | </p>
+<b>3 . विषमवृत्तं - पद्यस्य सर्वे पाद लक्षणानि विभिन्ना: भवन्ति ।</p>
+<b>यति - विरामो यति: इति सूत्रेण काव्य वाचन समये अर्थं सहितम् विराम: स्थान: यति:।</p>
+<b>गण - गण इति समूह: । छन्दे मात्रा गण अक्षर गण इति द्विविधा:।</p>
+</h4></p>
+<p><h3><b>1. चम्पकमाला </b></p></br>
+<p>	
+    अयं पङ्क्ति छन्दस: भेद: । अत्र अष्ठ भेदा: सन्ति । दश अक्षराणि सन्ति:।</p></br>
+<b>सुत्रम्:-</b> भ गण म गण स गण गुरू: यदि भवेत् तदा चम्पकमाला स्यात् ।</br></br>
+<strong>उदाहरणं :</h3></strong></br>
+<img src="{{url_for('static',filename='images/11.png')}}" />
+</p>
+</br>
+<p><h3><b>2 . विद्युन्माला </b> </p></br>
+<p>	
+<b>सुत्रम्:-</b>विद्युन्माल = 8 अक्षरं    मो मो गो गो विद्युन्माल
+ </br></br>
+<strong>उदाहरणं:</h3></strong></br>
+<img src="{{url_for('static',filename='images/9.png')}}" />
+</p>
+</br></br>
+<p><h3><b>3. शार्दूलविक्रीडित </b></p></br>
+<p>	
+<b>सुत्रम्:-</b>शार्दूलविक्रीडितम् = 19 अक्षरं       सूर्याश्वैर्मसजास्तताः स गुरवः शार्दूलविक्रीडितम्  </br></br>
+<strong>उदाहरणं:</h3></strong></br>
+<img src="{{url_for('static',filename='images/8.png')}}"/>
+</p>
+</br></br>
+<p><h3><b>4. मत्तेभविक्रीडित   </b></p></br>
+<p>	
+</p></br>
+<b>सुत्रम्:-</b> मत्तेभविक्रीडितं = 20 अक्षरं      सभरानम्यलगिति त्रयोदश  यतिर्मत्तेभविक्रीडितं  </br></br>
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/29.png')}}" />
+</p>
+</br></br>
+<p><h3><b>5.स्रग्धरा   </b>  </p></br>
+<p>	
+</p></br>
+<b>सुत्रम्:-</b>स्रग्धरा = 21 अक्षरं         म्रभ्नैर्यानां त्रयेण त्रिमुनियतियुता स्रग्धरा कीर्तितेयम् </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/30.png')}}" />
+</p>
+</br></br>
+
+<p><h3><b>6. हरिणी </b></p></br>
+<b>सुत्रम्:-</b>हरिणी = 17 अक्षरं     रसयुगहयैन्सौ म्रौ स्लौ गो यदा हरिणी तदा </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/7.png')}}" />
+</p>
+</br></br>
+
+<p><h3><b>7.  माणवक </b></p></br>
+<b>सुत्रम्:-</b>माणवक = 8 अक्षरं   माणवकम् भात्तलगाः
+.</br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/10.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 8.  हलमुखी </b></p></br>
+<b>सुत्रम्:-</b>हलमुखी = 9 अक्षरं     रान्नसाविह हलमुखी 
+</br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/12.png')}}" />
+</p>
+</br></br>
+<p><h3><b>  9. मन्दाक्रान्त </b></p></br>
+<b>सुत्रम्:-</b>मन्दाक्रान्त= 17 अक्षरं      मन्दाक्रान्ता जलधि षडगैम्भौ नतौ ताद्गुरु चेत्     </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/12.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 10.  शुद्धविराट् </b></p></br>
+<b>सुत्रम्:-</b>शुद्धविराट् = 10 अक्षरं     म्सौ ज्गौ शुद्धविराडिदम् मतं   </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/15.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 11.  दोधक </b></p></br>
+<b>सुत्रम्:-</b>दोधक = 11 अक्षरं  दोधक व्रुत्तमिदम् भ भ भाद् गौ </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/16.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 12.  रथोद्धता </b></p></br>
+<b>सुत्रम्:-</b>रथोद्धता = 11 अक्षरं  रान्नराविह रथोद्धता लगौ
+</br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/17.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 13.  स्वागत </b></p></br>
+<b>सुत्रम्:-</b>स्वागत = 11 अक्षरं  स्वागतेति रनभाद्गुरु युग्मं  </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/18.png')}}" />
+</p>
+</br></br>
+<p><h3><b>  14. मालिनी </b></p></br>
+<b>सुत्रम्:-</b>मालिनी = 15 अक्षरं  न न म य य युतेयं मालिनी भोगिलोकैः
+</br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/6.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 15. मालती </b></p></br>
+<b>सुत्रम्:-</b>मालती = 12 अक्षरं     भवति नजावथ मालती जरौ 
+</br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/20.png')}}" />
+</p>
+</br></br>
+<p><h3><b>  16. भुजङ्गप्रयातं </b></p></br>
+<b>सुत्रम्:-</b>भुजगशिशुभृता = 9 अक्षरं  भुजगशिशुभृता नौ मः </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/21.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 17.  प्रियंवदा </b></p></br>
+<b>सुत्रम्:-</b>प्रियंवदा = 12 अक्षरं     भुवि भवैन्नभ जरैः प्रियंवदा </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/22.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 18.  प्रहर्षिणी </b></p></br>
+<b>सुत्रम्:-</b>प्रहर्षिणी = 13 अक्षरं       म्नौ ज्रौग स्त्रिदशयतिः प्रहर्षिणीयम्  </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/23.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 19.  रुचिर </b></p></br>
+<b>सुत्रम्:-</b>रुचिरा = 13 अक्षरं     चतुर्ग्रहैर्यति रुचिरा जभौ स्जगाः    </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/24.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 20.  मञ्जुभाषिणी </b></p></br>
+<b>सुत्रम्:-</b>मञ्जुभाषिणी = 13 अक्षरं      सजसाजगौ भवति मञ्जुभाषिणी     </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/25.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 21.  वसन्ततिलक </b></p></br>
+<b>सुत्रम्:-</b>वसन्ततिलकं = 14 अक्षरं      उक्ता वसन्ततिलका त भ जा ज गौ गः  </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/26.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 22.  शिखरिणी </b></p></br>
+<b>सुत्रम्:-</b>शिखरिणी = 17 अक्षरं  रसैरुद्रैस्चिन्नायमनसभलागः शिखरिणी  </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/27.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 23.  पृथ्वी </b></p></br>
+<b>सुत्रम्:-</b>पृथ्वी = 17 अक्षरं  जसौजसयला वसुग्रहयतिश्च प्रुथ्वी गुरुः   </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/28.png')}}" />
+</p>
+</br></br>
+<p><h3><b>  24. शुद्धविराट् </b></p></br>
+<b>सुत्रम्:-</b>शुद्धविराट् = 10 अक्षरं   म्सौ ज्गौ शुद्धविराडिदम् मतं </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/27.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 25.  इन्द्रवज्र </b></p></br>
+<b>सुत्रम्:-</b>इन्द्रवज्र = 11 अक्षरं स्यादिन्द्रवज्रा यदि तौ जगौ गः </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/2.png')}}" />
+</p>
+</br></br>
+<p><h3><b> 26.  उपेन्द्रवज्रा </b></p></br>
+<b>सुत्रम्:-</b>उपेन्द्रवज्रा = 11 अक्षरं   उपेन्द्रवज्रा जतजास्ततो गौ  </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/3.png')}}" />
+</p>
+</br></br>
+<p><h3><b>  27. वंशस्थ </b></p></br>
+<b>सुत्रम्:-</b>वंशस्थ = 12 अक्षरं       जतौ तु वम्शस्थमुदीरितम् जरौ </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/30.png')}}" />
+</p>
+</br></br>
+<p><h3><b>  28. इन्द्रवंश </b></p></br>
+<b>सुत्रम्:-</b>इन्द्रवंश = 12 अक्षरं     स्यादिन्द्रवम्शा ततजैर सम्पुतैः 
+</br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/30.png')}}" />
+</p>
+</br></br>
+<p><h3><b>  29. वंशस्थ </b></p></br>
+<b>सुत्रम्:-</b>धृतविलंबित = 12 अक्षरं    धृतविलंबितमाह नाभौ भरौ   </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/4.png')}}" />
+</p>
+</br></br>
+<p><h3><b>  30. वाणिनी </b></p></br>
+<b>सुत्रम्:-</b>वाणिनी = 16 अक्षरं  न ज भ ज तैः सदा भवति वाणिनी गान्वितैः  </br></br> 
+<strong>उदाहरणं:</h3></strong></br> 
+<img src="{{url_for('static',filename='images/13.png')}}" />
+</p>
+</br></br>
+
+
+<!--<p>
+<strong>ಕಂದದ ನಿಯಮಗಳು:</strong>
+
+1.ಇದರಲ್ಲಿ ವಿಷಮ ಸ್ಥಾನಗಳಲ್ಲಿ ಅಂದರೆ 1,3,5,7 ಹಾಗೇ 9,11,13,15 ನೇ ಗಣಗಳಲ್ಲಿ ಜಗಣ ಅಂದರೆ ಮಧ್ಯಗುರು ಇರುವ U_U ವಿನ್ಯಾಸ ಬರಬಾರದು</br>
+2. ಎರಡನೇ ಹಾಗೂ ನಾಲ್ಕನೇ ಸಾಲಿನ ಕೊನೆಯ ಗಣವು ಅಂತ್ಯಗುರುಯುಕ್ತವಾಗಿರಬೇಕು. ಅಂದರೆ UU_ ಅಥವಾ __ ಈ ವಿನ್ಯಾಸಗಳು ಬರಬಹುದು.</br>
+3. 6ನೇ ಹಾಗೂ 14ನೇ ಗಣಗಳು ಮಾತ್ರ ಮಧ್ಯ ಗುರು ಇರುವ ಜಗಣ ವಿನ್ಯಾಸ (U_U) ಅಥವಾ ಸರ್ವಲಘುಗಳಿರುವ ವಿನ್ಯಾಸ (U,UUU) ಬರಬಹುದು. ಸರ್ವಲಘುಗಳಿರುವ ವಿನ್ಯಾಸ ಬಂದಲ್ಲಿ ಮೊದಲ ಅಕ್ಷರದ ನಂತರ ಯತಿ ಬರಲೇಬೇಕು.</br>
+4. ಉಳಿದ ಗಣಗಳಲ್ಲಿ ಯಾವ ರೀತಿಯ ವಿನ್ಯಾಸ ಬೇಕಾದರೂ ಬರಬಹುದು.</br>
+</p></br></br>
+<p>
+<strong>उदाहरणं:</strong></br>
+
+U U U U | _ _ |U U U U |</br>
+ಒಡೆಯಲ |ಜಾಂಡಂ | ಕುಲಗಿರಿ |</br></br>
+
+U U _ | U U_|U _ U|UU_| U U_|</br>
+ಕೆಡೆಯಲ್| ಪಿಳಿಯ|ಲ್ಕೆ ಧಾತ್ರಿ|ದಿವಿಜರ್| ನಡುಗ-|</br></br>
+
+U U U U| U _U | _ U U|</br>
+ಲ್ಕೊಡರಿಸು |ವಿನಂ ಜ | ಟಾಸುರ|</br></br>
+
+U _ U| UU_|U_U | _ _|__|</br>
+ಹಿಡಿಂಬ | ಬಕವೈ|ರಿ ಸಿಂಹ|ನಾದಂ| ಗೆಯ್ದಂ||</br></br>
+</p>-->
+<div class="panel-footer"><ul class="pager">
+    <li class="previous"><a href="{{ url_for('Laghu_Guru')}}">पूर्वतर पुट</a></li>
+    <li class="next"><a href="{{ url_for('Testing')}}">पर पुट</a></li>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>
+</p>
+</br>
+</div>
+
+</body>
+</html>
+

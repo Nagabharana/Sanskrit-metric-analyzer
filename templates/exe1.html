@@ -1,0 +1,148 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{url_for('static',filename='styles/chandassu.css')}}">
+<script src="{{url_for('static',filename='styles/bootstrap/jquery.min.js')}}"></script>
+<script src="{{url_for('static',filename='styles/bootstrap.min.js')}}"></script>
+<style>
+body{
+    background-color:#D3D3D3
+}
+#header{
+    background-color: blue;
+    height:60px;
+    padding:5px;
+}
+textarea{
+    width:538px;
+    border:1px solid #aaa;
+    height:350px;
+    padding:20px;
+    font-size:14pt;
+    font-weight: bold;
+    border:1px solid black;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:black;
+   color: white;
+   text-align: center;
+}
+.floatLeft { width: 50%; float: left; }
+.floatRight {width: 50%; float: right; }
+.container { overflow: hidden; }
+h4{
+font-size:150%;
+}
+</style>
+<script lang='javascript'>
+function onoff(clickedradio)
+{
+  if  (clickedradio.checked && clickedradio.value=='Submit')
+   {
+            document.getElementById("divtext").style.display="none";
+   }
+  else
+   {
+       document.getElementById("divtext").style.display="block";
+   }
+   //$('#txt2').append($("#abc").val());
+   var txt = $.trim($(this).text());
+    $("#text2").val($("#abc").val() + txt);
+   document.getElementById("jkl").style.display="none";
+   document.getElementById("Item").style.display="none";
+   document.getElementById("Item1").style.display="block";
+   document.getElementById("text2").style.display="block";
+   document.getElementById("text3").style.display="block";
+}
+</script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+ <div class="container-fluid">
+    <div class="navbar-header">
+    <a><h4><font color=red><b>छन्दष्शास्त्म्</b></font></h4></a>
+    </div>
+   <ul class="nav navbar-nav">
+     <li class="active"><a href="{{ url_for('Home')}}"><h4>मुख्यपुटम्  </h4></a></li>
+<li><a href="{{ url_for('Chandassu')}}"><h4><font color=white>छन्द:</font></h4></a></li>
+<li><a href="{{ url_for('Laghu_Guru')}}"><h4><font color=white>लघुं - गुरुं  </font></h4></a></li>
+<li><a href="{{ url_for('Vrutta')}}"><h4><font color=white>वृत्तम्</font></h4></a></li>
+<li><a href="{{ url_for('Testing')}}"><h4><font color=white>परीक्षम् </font></h4></a></li>
+<li><a href="{{ url_for('exe1')}}"><h4><font color=white>आभ्यासम्</font> </h4></a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="{{ url_for('About')}}"><h4><font color=white>सूचना</font> </h4></a></li>   
+</ul>
+  </div>
+</nav>
+<div class="container">
+<div class="panel panel-primary">
+<div class="panel-heading"><center><h3>आभ्यासम्</h3></center></div>
+<div class="panel-body">
+<div class="floatLeft" >
+<center><b><h4>User Part</h4></b></center>
+<textarea id="txt1" rows="20" name="ISSUE" cols="60">{%for akshara_list2 in akshara_list1%}
+
+{{akshara_list2}}{%endfor%} </textarea></br></br>
+<label id="text3" style='display:none'>Selected Chandassu Type:</label>
+<input type="text" id="text2" style='display:none' readonly />
+<div class="form-group" id="jkl" style='display:block'>
+<label for="sel1">Select Chandassu Type:</label>
+<select class="form-control" id="abc" required>
+<option>इतरे  </option>
+<option>इन्द्रवज्रा</option>
+<option>उपेन्द्रवज्रा </option>
+<option>वंशस्थ </option>
+<option>द्रुतविळम्बितम्</option>
+<option>मालिनी </option>
+<option>हरिणी </option>
+<option>भुजगशिशुभृता </option>
+<option>शार्दूलविक्रिडित  </option>
+<option>विद्युन्माला  </option>
+<option>माणवक </option>
+<option>हलमुखी </option>
+<option>वाणिनी </option>
+<option>शुद्धविराट्</option>
+<option>चम्पकमाल </option>
+<option>दोधक </option>
+<option>रथोद्धता </option>
+<option>स्वागत   </option>
+<option>इन्द्रवंश</option>
+<option>मालती </option>
+<option>भुजङ्गप्रयातं </option>
+<option>प्रियंवदा</option>
+<option>प्रहर्षिणी </option>
+<option>रुचिर </option>
+<option>मञ्जुभाषिणी </option>
+<option>वसन्ततिलक  </option>
+<option>शिखरिणी  </option>
+<option>पृथ्वी </option>
+<option>मत्तेभविक्रीडित </option>
+<option>स्रग्धरा </option>
+</select>
+</div><div id=Item style='display:block'>
+<center><input type="button" id="ItemName" onclick="onoff(this)" value="Submit"></center></div>
+</div>
+<div class="floatRight">
+<div id=divtext style='display:none'><center><b><h4>System output</h4></b></center><font face="Arial"><textarea id="txt1" rows="20" name="ISSUE" cols="60">{%for akshara_list in akshara_lists%}{{akshara_list}}
+{%endfor%}</textarea></div></div></br></br>
+<div id=Item1 style='display:none'><center><a href="{{ url_for('exe1')}}"><button>Back</button></a><a href="{{ url_for('exe')}}"><button>Try another one</button></a></center></div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-footer"><ul class="pager">
+    <center><li class="previous"><a href="{{ url_for('exe1')}}">पूर्वतर पुट</a></li></center>
+</div>
+<div class="footer">
+<p>
+</p>
+</br>
+</div>
+</body>
+</html>
